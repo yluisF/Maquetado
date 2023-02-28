@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+
+<head>
+    <title>Sistema de predios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="../css/util.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" href="../css/particlesMin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="../assets/logo-web.webp" width="200" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Ciudad Acuña</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestion.html">Gestión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+
+    <header class="masthead">
+        <div class="align-items-center">
+            <div class="sombra">
+                <div id="particles-js"></div>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+
+                        <div class="col-12 text-center" id="as">
+                            <img src="assets/Inicio.webp" class="rounded mx-auto d-block img1" alt="">
+                            <h1 class="fw-light"> <b>Agregar usuario</b></h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- Page Content -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-light">Insertar datos</h2>
+            <hr>
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Apellido Paterno</label>
+                        <input type="text" class="form-control" id="apat" placeholder="Apellido Paterno">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Apellido Materno</label>
+                        <input type="text" class="form-control" id="amat" placeholder="Apellido Materno">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Correo</label>
+                    <input type="email" class="form-control" id="email" placeholder="alguien@algo.com">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Contraseña</label>
+                    <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="addUser()">Registrar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+
+                        <img src="../assets/Inicio.webp" width="80" class="rounded mx-auto d-block" alt="">
+                    </a>
+                    <span class="text-muted"> 2022 Presidencia Municipal Ciudad Acuña, Coah.</span>
+                </div>
+
+                <!--===============================================================================================-->
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="icon"><a class="text-muted" href="https://twitter.com/municipalacuna"><i
+                                class="fa-brands fa-square-twitter tam" style="font-size:48px;"></i></a></li>
+                    <li class="fw-light">  </li>
+                    <li class="icon"><a class="text-muted" href="https://www.facebook.com/municipalacuna"><i
+                                class="fa-brands fa-square-instagram tam" style="font-size:48px;"></i></a></li>
+
+                </ul>
+
+                <!--===============================================================================================-->
+            </footer>
+        </div>
+    </footer>
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/da0d6bb382.js" crossorigin="anonymous"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/app.js"></script>
+	<script src="../js/api.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>
